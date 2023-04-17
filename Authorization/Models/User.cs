@@ -19,7 +19,7 @@ namespace Authorization.Models
 
         public override string ToString()
         {
-            return "Login: " + Login + ". Password: " + Password;
+            return "Login: " + Login + ". Email: " +Email + ". Password: " + Password;
         }
 
     }

@@ -29,5 +29,20 @@ namespace Authorization.Windows
             lv.ItemsSource = user;
 
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow main = new MainWindow();
+            Close();
+            main.ShowDialog();
+        }
     }
 }

@@ -8,10 +8,21 @@
         Title="Личный кабинет администратора" Height="650" Width="600"
          WindowStartupLocation="CenterScreen"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowStyle="None">
     <Grid Background="#483D8B">
-        <ScrollViewer>
-            <ListView x:Name="lv" Margin="10" FontSize="15"/>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Background="Transparent" Grid.Row="0" VerticalAlignment="Top" MouseDown="Grid_MouseDown">
+            <Border Height="49" Width="500" HorizontalAlignment="Left">
+                <TextBlock Text="Личный кабинет администратора" FontSize="28"  FontFamily="Cooper Black"/>
+            </Border>
+            <Button x:Name="btn_close" Style="{StaticResource MaterialDesignFlatSecondaryButton}" Click="btn_close_Click"  Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="×"/>
+
+        </Grid>
+        <ScrollViewer Grid.Row="1">
+            <ListView x:Name="lv" Margin="0, 0, 0, 10" FontSize="15"/>
         </ScrollViewer>
     </Grid>
 </Window>

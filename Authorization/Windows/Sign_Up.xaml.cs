@@ -11,6 +11,7 @@ using System.Windows.Input;
 using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
+using Authorization.DB;
 using Authorization.Models;
 
 namespace Authorization.Windows
@@ -39,10 +40,33 @@ namespace Authorization.Windows
 
         private void btn_up_Click(object sender, RoutedEventArgs e)
         {
-            Metods.Sign_Up(user.Login, user.Email, user.Password);
-            Account account = new Account();
-            Close();
-            account.ShowDialog();
+            
+                using (ApplicationContext db = new ApplicationContext())
+                {
+                    var check = db.Users.Where(x => x.Login == user.Login && x.Password == user.Password).FirstOrDefault();
+                    if (check == null)
+                    {
+                        bool r = Metods.Sign_Up(user.Login, user.Email, user.Password);
+
+
+
+                        if (user.Login == "FutEki" && user.Password == "senchaaa55")
+                        {
+                            MyAccount myAccount = new MyAccount();
+                            Close();
+                            myAccount.ShowDialog();
+                        }
+                        else
+                        {
+                            Account account = new Account();
+                            Close();
+                            account.ShowDialog();
+                        }
+                    }
+                    else
+                        MessageBox.Show("Пользователь с таким именем уже есть");
+                
+            }
         }   
     }
 }

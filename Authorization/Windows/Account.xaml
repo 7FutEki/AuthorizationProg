@@ -28,7 +28,7 @@
         <TextBlock Grid.Row="0" Grid.Column="0" Text="🔍"    FontSize="35" Style="{StaticResource MaterialDesignTextBlock}" Margin="0,0,60,53" />
         <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Поиск" FontSize="16" Style="{StaticResource MaterialDesignFilledTextBox}" Grid.ColumnSpan="3" Margin="60,0,0,51" Background="#ADFF2F"/>
         <Button Grid.Column="3" Grid.Row="0"  Content="🔔" Margin="0,0,0,74"/>
-        <Button Grid.Column="4" Grid.Row="0" Content="👤" Margin="0,0,0,74"/>
+        <Button Grid.Column="4" x:Name="Acc"  Grid.Row="0" Content="👤" Margin="0,0,0,74" Click="AccButton_Click"/>
         <Line X1="0" Y1="150" X2="550" Y2="150" Stroke="#ADFF2F" Grid.Column="0" Grid.Row="4"/>
         <Border Grid.Row="1" HorizontalAlignment="Left" Width="600" Height="422" VerticalAlignment="Center" Grid.RowSpan="4" Grid.ColumnSpan="5">
             <StackPanel Height="250" Orientation="Horizontal" HorizontalAlignment="Center">

@@ -12,10 +12,8 @@ namespace Authorization.Models
 {
     public class Metods
     {
-        public static string Sign_Up(string login,string email, string password)
+        public static bool Sign_Up(string login,string email, string password)
         {
-
-            string result = "Уже существует";
             using (ApplicationContext db = new ApplicationContext())
             {
                 db.Database.Migrate();
@@ -31,9 +29,10 @@ namespace Authorization.Models
                     };
                     db.Users.Add(newuser);
                     db.SaveChanges();
-                    result = "Сделано";
+                    return true;
                 }
-                return result;
+                else
+                    return false;
             }
         }
 

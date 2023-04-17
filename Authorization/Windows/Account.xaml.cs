@@ -23,5 +23,12 @@ namespace Authorization.Windows
         {
             InitializeComponent();
         }
+
+        private void AccButton_Click(object sender, RoutedEventArgs e)
+        {
+            MainAccount mainAccount = new MainAccount();
+            Close();
+            mainAccount.ShowDialog();
+        }
     }
 }
