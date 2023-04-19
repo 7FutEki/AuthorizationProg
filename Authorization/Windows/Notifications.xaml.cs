@@ -15,27 +15,20 @@ using System.Windows.Shapes;
 namespace Authorization.Windows
 {
     /// <summary>
-    /// Логика взаимодействия для Account.xaml
+    /// Логика взаимодействия для Notifications.xaml
     /// </summary>
-    public partial class Account : Window
+    public partial class Notifications : Window
     {
-        public Account()
+        public Notifications()
         {
             InitializeComponent();
         }
 
-        private void AccButton_Click(object sender, RoutedEventArgs e)
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
         {
-            MainAccount mainAccount = new MainAccount();
+            Account account = new Account();
             Close();
-            mainAccount.ShowDialog();
-        }
-
-        private void btn_ntf_Click(object sender, RoutedEventArgs e)
-        {
-            Notifications notifications = new Notifications();
-            Close();
-            notifications.ShowDialog();
+            account.ShowDialog();
         }
     }
 }

@@ -1,0 +1,58 @@
+﻿<Window x:Class="Authorization.Windows.Notifications"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Authorization.Windows"
+        mc:Ignorable="d"
+        Title="Уведомления" Height="650" Width="600"
+         WindowStartupLocation="CenterScreen"
+        xmlns:ui="http://schemas.modernwpf.com/2019"
+         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        ResizeMode="NoResize" WindowStyle="None">
+    <Window.Background>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="#FFCAFFED"/>
+            <GradientStop Color="#FF082B1F" Offset="1"/>
+            <GradientStop Color="#FF12C788" Offset="0.538"/>
+        </LinearGradientBrush>
+    </Window.Background>
+    <Grid >
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="50"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <TextBlock Grid.Row="0" Grid.Column="1" Text="Уведомления" VerticalAlignment="Center" HorizontalAlignment="Center" FontSize="30" FontFamily="Cooper Black"/>
+        <Button Grid.Column="0" Grid.Row="0" Content="🠔" x:Name="btn_exit" Click="btn_exit_Click" Height="50" Width="50" FontSize="30" Background="Transparent" Style="{StaticResource MaterialDesignFlatButton}" Foreground="Black"/>
+        <StackPanel Grid.Row="1" Grid.Column="1" >
+            <TextBlock Text="Совершен вход в ваш аккаунт через приложение «Authorization»" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="Сбербанк предложил клиентам c iOS перейти на новое приложение" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="«Как же они там живут?»: в Красноглинском районе Самары затопило коттеджи" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="В Самарском государственно колледже произошла кража неизвестного предмета" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="♥Пользователь Максим Дзема оценил 20 ваших фотографий♥" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="У вас новый рекомендованный друг: Крош из смешариков, а что, у меня больше нет идей" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="У меня больше нет идей. У меня больше нет идей. У меня больше нет идей." FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="У меня больше нет идей. У меня больше нет идей. У меня больше нет идей." FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="У меня больше нет идей. У меня больше нет идей. У меня больше нет идей." FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝☝" FontSize="20" TextWrapping="Wrap" />
+            <TextBlock Text="Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец. Ура, конец." FontSize="20" TextWrapping="Wrap" />
+        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="0" Orientation="Vertical">
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+            <TextBlock Text="🔔" Background="Yellow" FontSize="40"/>
+        </StackPanel>
+    </Grid>
+</Window>

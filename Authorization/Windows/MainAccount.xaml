@@ -11,9 +11,9 @@
         ResizeMode="NoResize" WindowStyle="None">
     <Window.Background>
         <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
-            <GradientStop Color="#FF21540A"/>
-            <GradientStop Color="#FF4B7751" Offset="1"/>
-            <GradientStop Color="#FF598258" Offset="0.48"/>
+            <GradientStop Color="#FF1E1C58"/>
+            <GradientStop Color="#FF9B9C3F" Offset="1"/>
+            <GradientStop Color="#FF383158" Offset="0.48"/>
         </LinearGradientBrush>
     </Window.Background>
     <Grid>
@@ -31,7 +31,7 @@
                 <Button x:Name="btn_close" Style="{StaticResource MaterialDesignFlatSecondaryButton}" Click="btn_close_Click"  Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="×"/>
          </Grid>
             <StackPanel Grid.Row="1">
-            <TextBlock Text="Введите вашу почту" Height="54" Width="300" HorizontalAlignment="Left" FontSize="20" />
+            <TextBlock Text="Введите вашу почту" Height="54" Width="300" HorizontalAlignment="Left" FontSize="20" FontWeight="Bold" />
             <TextBox x:Name="tb_email"   Height="54" Width="300" HorizontalAlignment="Left" FontSize="20" Style="{StaticResource MaterialDesignTextBox}" />
             <Button Click="btn_check_Click"  Style="{StaticResource  MaterialDesignFlatSecondaryButton }" x:Name="btn_check" Content="Нажмите" Width="300" HorizontalAlignment="Left"/>
             <TextBlock x:Name="tb_login" Height="54" Width="300" HorizontalAlignment="Left" FontSize="20" />
