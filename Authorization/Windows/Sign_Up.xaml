@@ -11,9 +11,9 @@
         ResizeMode="NoResize">
     <Grid Background="#483D8B">
         <StackPanel Orientation="Vertical" VerticalAlignment="Center" x:Name="sp">
-            <TextBox Text="{Binding Login}" materialDesign:HintAssist.Hint="Введите логин" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
-            <TextBox Text="{Binding Email}" materialDesign:HintAssist.Hint="Введите Email" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
-            <TextBox Text="{Binding Password}" materialDesign:HintAssist.Hint="Введите пароль" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
+            <TextBox Text="{Binding Login}" x:Name="tb_log" materialDesign:HintAssist.Hint="Введите логин" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
+            <TextBox Text="{Binding Email}" x:Name="tb_email" materialDesign:HintAssist.Hint="Введите Email" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
+            <TextBox Text="{Binding Password}" x:Name="tb_pass" materialDesign:HintAssist.Hint="Введите пароль" Height="60" FontSize="15" Style="{StaticResource MaterialDesignFilledTextBox}" Margin="0 0 0 10" Background="#ADFF2F"/>
             <Button x:Name="btn_up" Click="btn_up_Click" Content="Sign Up" FontSize="20" Style="{StaticResource MaterialDesignFlatAccentBgButton}" Margin="0 0 0 10" Height="50"/>
             <Button x:Name="btn_close" Click="btn_close_Click" Content="Exit"  FontSize="20" Style="{StaticResource MaterialDesignFlatAccentBgButton}" Height="40" />
         </StackPanel>

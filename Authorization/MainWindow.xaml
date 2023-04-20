@@ -9,10 +9,17 @@
         xmlns:ui="http://schemas.modernwpf.com/2019"
         xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
         WindowStartupLocation="CenterScreen"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowStyle="None">
 
     <Grid Background="#7CFC00">
-        <Border VerticalAlignment="Center" Width="550">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Background="Transparent" MouseDown="Grid_MouseDown">
+            <Button x:Name="btn_close" Style="{StaticResource MaterialDesignFlatButton}" Click="btn_close_Click" Height="50" Width="50" Foreground="Black" FontSize="20" Grid.Row="0" HorizontalAlignment="Right" VerticalAlignment="Top" Content="×"/>
+        </Grid>
+        <Border VerticalAlignment="Center" Width="550" Grid.Row="1">
             <StackPanel>
                 <Grid Margin="0 0 0 20" >
                     <Button x:Name="btn_in" Click="btn_in_Click" HorizontalAlignment="Left"  Style="{StaticResource MaterialDesignFlatSecondaryDarkBgButton}" Content="Sign In"   Height="32" Width="100"  Cursor="Hand"/>

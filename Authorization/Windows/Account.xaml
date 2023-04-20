@@ -8,29 +8,22 @@
         Title="Account" Height="650" Width="600"
          WindowStartupLocation="CenterScreen"
          xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
-        ResizeMode="NoResize">
+        ResizeMode="NoResize" WindowStyle="None">
     <Grid Background="#483D8B">
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-            <ColumnDefinition/>
-        </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="50"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
-        <TextBlock Grid.Row="0" Grid.Column="0" Text="🔍"    FontSize="35" Style="{StaticResource MaterialDesignTextBlock}" Margin="0,0,60,53" />
-        <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Поиск" FontSize="16" Style="{StaticResource MaterialDesignFilledTextBox}" Grid.ColumnSpan="3" Margin="60,0,0,51" Background="#ADFF2F"/>
-        <Button Grid.Column="3" x:Name="btn_ntf" Click="btn_ntf_Click" Grid.Row="0"  Content="🔔" Margin="0,0,0,74"/>
-        <Button Grid.Column="4" x:Name="Acc"  Grid.Row="0" Content="👤" Margin="0,0,0,74" Click="AccButton_Click"/>
-        <Line X1="0" Y1="150" X2="550" Y2="150" Stroke="#ADFF2F" Grid.Column="0" Grid.Row="4"/>
-        <Border Grid.Row="1" HorizontalAlignment="Left" Width="600" Height="422" VerticalAlignment="Center" Grid.RowSpan="4" Grid.ColumnSpan="5">
+        <Grid Grid.Row="0" Background="Transparent" MouseDown="Grid_MouseDown">
+            <StackPanel Orientation="Horizontal" Cursor="">
+                <TextBlock Grid.Row="0" Text="🔍"  Height="50" Width="50"   FontSize="35" Style="{StaticResource MaterialDesignTextBlock}" />
+                <TextBox Grid.Row="0" materialDesign:HintAssist.Hint="Поиск" FontSize="16" Width="350"   Style="{StaticResource MaterialDesignFilledTextBox}" Background="#ADFF2F"/>
+                <Button x:Name="btn_ntf" Click="btn_ntf_Click" Grid.Row="0"  Content="🔔" Width="100"   VerticalAlignment="Top" Cursor="Hand"/>
+                <Button x:Name="Acc"  Grid.Row="0" Content="👤" VerticalAlignment="Top" Width="100"  Click="AccButton_Click" Cursor="Hand"/>
+            </StackPanel>
+        </Grid>
+            <Line X1="0" Y1="500" X2="600" Y2="500" Stroke="#ADFF2F"  Grid.Row="4"/>
+        <Border Grid.Row="1" HorizontalAlignment="Left" Width="600" Height="422" VerticalAlignment="Center">
             <StackPanel Height="250" Orientation="Horizontal" HorizontalAlignment="Center">
                 <TextBlock Text="Как жарить мясо, чтобы оно не получалось жестким и сухим" FontSize="30" TextWrapping="Wrap" Width="222" FontWeight="Bold"/>
             </StackPanel>

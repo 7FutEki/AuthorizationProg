@@ -37,5 +37,18 @@ namespace Authorization.Windows
             Close();
             notifications.ShowDialog();
         }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void btn_exit_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }

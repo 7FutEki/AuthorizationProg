@@ -55,6 +55,7 @@ namespace Authorization
                     Close();
                     myAccount.ShowDialog();
                 }
+                
                 else
                 {
                     Account account = new Account();
@@ -79,6 +80,19 @@ namespace Authorization
             //Smtp.Send(Message);
                 
             
+        }
+
+        private void Grid_MouseDown(object sender, MouseButtonEventArgs e)
+        {
+            if (e.ChangedButton == MouseButton.Left)
+            {
+                this.DragMove();
+            }
+        }
+
+        private void btn_close_Click(object sender, RoutedEventArgs e)
+        {
+            Close();
         }
     }
 }
